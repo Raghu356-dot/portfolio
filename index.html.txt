@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raghavendra • Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .section h3 {
+      margin-top: 0;
+      color: #444;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #007BFF;
+      color: white;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    a.project-link {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+      background: #28a745;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    a.project-link:hover {
+      background: #218838;
+    }
+
+    a.main-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      background: #007BFF;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    a.main-link:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Portfolio</h1>
+
+    <div class="section">
+      <h3>Introduction</h3>
+      <p><strong>Name:</strong> Raghavendra</p>
+      <p><strong>Phone:</strong> 8217216438</p>
+      <p><strong>Email:</strong> rpatne12gmai.com</p>
+      <p>
+        I am a software engineering enthusiast with a passion for coding, problem-solving, 
+        and creating impactful solutions. I enjoy learning new programming languages and 
+        working on projects that strengthen my technical skills.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Education</h3>
+      <p><strong>College:</strong> BIET, Davangere</p>
+      <p><strong>School:</strong> Shree Basaveshwar Public School, Basavakalyan</p>
+    </div>
+
+    <div class="section">
+      <h3>Projects</h3>
+      <p>
+        <strong>Online Movie Ticket Booking System</strong><br>
+        Built using HTML, CSS, PHP, and XAMPP server. 
+        This project allowed me to practice full-stack development and database integration.
+      </p>
+
+      <p>
+        <strong>📚 StudyMate — Chat with your PDFs</strong><br>
+        A Streamlit-powered app that lets you upload PDFs or text files and then ask questions about them.<br>
+        It uses FAISS for semantic search, transformer embeddings for document indexing, and can optionally use the Gemini API for more natural answers.
+      </p>
+      <ul>
+        <li>Upload multiple PDF or TXT files</li>
+        <li>Automatic text extraction & chunking</li>
+        <li>FAISS index with transformer embeddings</li>
+        <li>Offline extractive answer synthesis</li>
+        <li>Optional Gemini API for natural responses</li>
+        <li>Download citations for your session</li>
+      </ul>
+      <a class="project-link" href="https://github.com/Raghu356-dot/StudyMate" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <div class="section">
+      <h3>Skills</h3>
+      <div class="skills">
+        <span>Python</span>
+        <span>C</span>
+        <span>C++</span>
+        <span>Java</span>
+        <span>DSA</span>
+        <span>SQL</span>
+        <span>MongoDB</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>PHP</span>
+        <span>XAMPP</span>
+      </div>
+    </div>
+
+    <a class="main-link" href="https://www.linkedin.com/in/raghavendra-patne-4872b12a1" target="_blank">Visit My LinkedIn</a>
+  </div>
+</body>
+</html>
