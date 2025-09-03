@@ -4,132 +4,255 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raghavendra • Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f6f9;
-      color: #333;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
+      background: #f9fafc;
       color: #222;
     }
-
-    .section {
+    nav {
       background: #fff;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-
-    .section h3 {
-      margin-top: 0;
-      color: #444;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
+    nav h2 {
+      margin: 0;
+      color: #007BFF;
+      font-weight: 700;
     }
-
-    .skills span {
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #007BFF;
+    }
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(135deg, #007BFF, #00b894);
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      opacity: 0.95;
+    }
+    .resume-btn {
       display: inline-block;
-      background: #007BFF;
-      color: white;
-      padding: 6px 12px;
-      margin: 5px;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-
-    a.project-link {
-      display: inline-block;
-      margin-top: 10px;
+      margin-top: 25px;
       text-decoration: none;
       color: white;
-      background: #28a745;
-      padding: 8px 12px;
-      border-radius: 5px;
+      background: #ff5733;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .resume-btn:hover {
+      background: #e64a19;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 0;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+    .section h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 35px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card h3 {
+      margin-bottom: 12px;
+      color: #007BFF;
+    }
+    .project-grid, .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .project-card, .cert-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .project-card:hover, .cert-card:hover {
+      transform: translateY(-6px);
+    }
+    .project-card h4, .cert-card h4 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+    .project-card ul {
+      margin: 10px 0 0 20px;
       font-size: 14px;
-      transition: background 0.3s;
+      text-align: left;
     }
-
-    a.project-link:hover {
-      background: #218838;
-    }
-
-    a.main-link {
+    a.project-link, .cert-card a {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 12px;
       text-decoration: none;
       color: white;
       background: #007BFF;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
       transition: background 0.3s;
     }
-
-    a.main-link:hover {
+    a.project-link:hover, .cert-card a:hover {
       background: #0056b3;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .skills span {
+      background: linear-gradient(135deg, #007BFF, #00b894);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    .skills span:hover {
+      transform: scale(1.15);
+    }
+    footer {
+      background: #0d1b2a;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+    }
+    footer a {
+      color: #00b894;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media(max-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <h2>Raghavendra</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1>Hi, I'm Raghavendra</h1>
+    <p>Software Engineering Enthusiast • Passionate Coder • Problem Solver</p>
+    <a class="resume-btn" href="resume_STU676c3a81910b01735146113_1751516082.pdf" download>⬇ Download My Resume</a>
+  </div>
+
   <div class="container">
-    <h1>My Portfolio</h1>
-
-    <div class="section">
-      <h3>Introduction</h3>
-      <p><strong>Name:</strong> Raghavendra</p>
-      <p><strong>Phone:</strong> 8217216438</p>
-      <p><strong>Email:</strong> rpatne12gmai.com</p>
-      <p>
-        I am a software engineering enthusiast with a passion for coding, problem-solving, 
-        and creating impactful solutions. I enjoy learning new programming languages and 
-        working on projects that strengthen my technical skills.
-      </p>
+    <div id="about" class="section">
+      <h2>About Me</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Who I Am</h3>
+          <p><strong>Phone:</strong> 8217216438</p>
+          <p><strong>Email:</strong> rpatne12gmai.com</p>
+          <p>I am a software engineering enthusiast with a passion for coding, problem-solving, and creating impactful solutions. I enjoy learning new programming languages and working on projects that strengthen my technical skills.</p>
+        </div>
+        <div class="card">
+          <h3>Education</h3>
+          <p><strong>College:</strong> BIET, Davangere</p>
+          <p><strong>School:</strong> Shree Basaveshwar Public School, Basavakalyan</p>
+        </div>
+      </div>
     </div>
 
-    <div class="section">
-      <h3>Education</h3>
-      <p><strong>College:</strong> BIET, Davangere</p>
-      <p><strong>School:</strong> Shree Basaveshwar Public School, Basavakalyan</p>
+    <div id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h4>Online Movie Ticket Booking System</h4>
+          <p>Built using HTML, CSS, PHP, and XAMPP server. This project allowed me to practice full-stack development and database integration.</p>
+        </div>
+        <div class="project-card">
+          <h4>StudyMate — Chat with your PDFs</h4>
+          <p>A Streamlit-powered app that lets you upload PDFs or text files and then ask questions about them.</p>
+          <ul>
+            <li>Upload multiple PDF or TXT files</li>
+            <li>Automatic text extraction & chunking</li>
+            <li>FAISS index with transformer embeddings</li>
+            <li>Offline extractive answer synthesis</li>
+            <li>Optional Gemini API for natural responses</li>
+            <li>Download citations for your session</li>
+          </ul>
+          <a class="project-link" href="https://github.com/Raghu356-dot/StudyMate" target="_blank">View on GitHub</a>
+        </div>
+      </div>
     </div>
 
-    <div class="section">
-      <h3>Projects</h3>
-      <p>
-        <strong>Online Movie Ticket Booking System</strong><br>
-        Built using HTML, CSS, PHP, and XAMPP server. 
-        This project allowed me to practice full-stack development and database integration.
-      </p>
-
-      <p>
-        <strong>📚 StudyMate — Chat with your PDFs</strong><br>
-        A Streamlit-powered app that lets you upload PDFs or text files and then ask questions about them.<br>
-        It uses FAISS for semantic search, transformer embeddings for document indexing, and can optionally use the Gemini API for more natural answers.
-      </p>
-      <ul>
-        <li>Upload multiple PDF or TXT files</li>
-        <li>Automatic text extraction & chunking</li>
-        <li>FAISS index with transformer embeddings</li>
-        <li>Offline extractive answer synthesis</li>
-        <li>Optional Gemini API for natural responses</li>
-        <li>Download citations for your session</li>
-      </ul>
-      <a class="project-link" href="https://github.com/Raghu356-dot/StudyMate" target="_blank">🔗 View on GitHub</a>
-    </div>
-
-    <div class="section">
-      <h3>Skills</h3>
+    <div id="skills" class="section">
+      <h2>Skills</h2>
       <div class="skills">
         <span>Python</span>
         <span>C</span>
@@ -145,7 +268,28 @@
       </div>
     </div>
 
-    <a class="main-link" href="https://www.linkedin.com/in/raghavendra-patne-4872b12a1" target="_blank">Visit My LinkedIn</a>
+    <div id="certifications" class="section">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h4>Oracle Certified AI Foundations</h4>
+          <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=658C9FA0CA9464509F87DB6873347D943BC59051E214C756B12A27EC2685AF7C" target="_blank">View Certificate</a>
+        </div>
+        <div class="cert-card">
+          <h4>MongoDB Associate Developer Exam</h4>
+          <a href="https://learn.mongodb.com/c/anMs4UeKTzGDFACDZbllFg" target="_blank">View Certificate</a>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <footer id="contact">
+    <p>Connect with me:</p>
+    <a href="mailto:rpatne12gmai.com">Email</a> |
+    <a href="https://github.com/Raghu356-dot" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/raghavendra-patne-4872b12a1" target="_blank">LinkedIn</a>
+    <p style="margin-top:10px;">© 2025 Raghavendra • All Rights Reserved</p>
+  </footer>
 </body>
 </html>
+
